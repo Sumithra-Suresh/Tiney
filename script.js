@@ -271,7 +271,7 @@ function getChildCard(expectedChildren){
     iconContainer.className = "icon-container";
 
     let img = document.createElement("img");
-    img.src = "./images/img1.jpg";
+    img.src = "./images/img.jpg";
     img.alt= "kid photo";
     iconContainer.appendChild(img);
 
