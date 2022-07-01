@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Tiney">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Tiney</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Welcome SS!</h1>
+            </header>
+
+            <div class="top-btn">
+                <button id="registerBtn">Register</button>
+                <button id="dailyLogBtn">Daily Log</button>
+                <button id="historyBtn">History</button>
+            </div>
+
+            <br><br>
+
+            <div class="daily-log">
+                <hr>
+                <h2>Daily Log</h2>
+                <div id="dailyLogContent"> </div>
+            </div>
+
+            <div class="history">
+                <hr>
+                <h2>History</h2>
+                <form id="historyForm">
+                    <label for="history-date">Choose a date: </label>
+                    <input type="date" id="history-date" name="history-date" required>
+                    <button type="submit" id="getHistoryBtn">Submit</button>
+                </form>
+                <div id="historyLogContent">  </div>
+            </div>
+
+            <!-- Register Modal -->
+            <div class="modal" id="registerModal" >
+                <!-- Modal content -->
+                <div class="modal-content modal-register">
+                    <span class="close" id="modalRegisterClose">&times;</span>
+                    
+                    <form id="registerForm">
+                        <div>
+                            <label for="childName">Name:</label>
+                            <input type="text" id="childName" name="childName"  required/>
+                        </div>
+
+                        <div class="weekDays-selector">
+                            <label>Days to Check-in : </label>
+                            <input type="checkbox" id="monday" name="weekdays"/>
+                            <label for="monday">M</label>
+                            <input type="checkbox" id="tuesday" name="weekdays"/>
+                            <label for="tuesday">T</label>
+                            <input type="checkbox" id="wednesday" name="weekdays"/>
+                            <label for="wednesday">W</label>
+                            <input type="checkbox" id="thursday" name="weekdays"/>
+                            <label for="thursday">T</label>
+                            <input type="checkbox" id="friday" name="weekdays"/>
+                            <label for="friday">F</label>
+                            <input type="checkbox" id="sataurday" name="weekdays"/>
+                            <label for="sataurday">S</label>
+                            <input type="checkbox" id="sunday" name="weekdays"/>
+                            <label for="sunday">S</label>
+                        </div>
+
+                        <!-- <input type="submit" value="Register" id="register-btn"> -->
+                        <button id="modalRegisterBtn" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sign-in Modal -->
+            <div class="modal" id="signInModal" >
+                <!-- Modal content -->
+                <div class="modal-content modal-signIn">
+                    <span class="close" id="modalSignInClose">&times;</span>
+                    
+                    <form id="signInForm">
+
+                        <h2 id="signInHeading"></h2>
+
+                        <div class="date-time">
+                            <label for="signInLabel" id="signInLabel"></label>
+                            <input type="time" id="signInTime" name="signInTime" required/>
+                        </div>
+                    
+                        <div class="signIn-Modal-btn-group">
+                            <button type="submit" id="signInConfirmBtn">Confirm Sign in</button>
+                            <button id="signInAbsentBtn" type="button">Report absent</button>
+                        </div>
+
+                        <input type="hidden" id="signInChildId" name="signInChildId" />
+                    </form> 
+                </div>
+            </div>
+
+
+            <!-- Sign-out Modal -->
+            <div class="modal" id="signOutModal" >
+                <!-- Modal content -->
+                <div class="modal-content modal-signOut">
+                    <span class="close" id="modalSignOutClose">&times;</span>
+                    
+                    <form id="signOutForm">
+
+                        <h2 id="signOutHeading"></h2>
+
+                        <div class="date-time">
+                            <label for="signOutLabel" id="signOutLabel"></label>
+                            <input type="time" id="signOutTime" name="signOutTime" required/>
+                        </div>
+                    
+                        <button type="submit" id="signOutConfirmBtn">Confirm Sign Out</button>
+
+                        <input type="hidden" id="signOutChildId" name="signOutChildId" />
+                    </form> 
+                </div>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
